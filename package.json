@@ -22,7 +22,7 @@
     "gulp-pug": "^4.0.1",
     "js-yaml": "^3.14.0",
     "sass": "^1.57.1",
-    "tailwindcss": "^1.4.6",
+    "tailwindcss": "^3.2.4",
     "gulp-sass": "^5.1.0",
     "yaml-include": "^1.2.1"
   }
