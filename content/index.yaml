@@ -4,5 +4,63 @@ github: https://github.com/peawyoyoyin
 page_source: https://github.com/peawyoyoyin/resume
 summary: |
   Software Engineer with 3 years of experience, Bachelor's Degree in Computer Engineering, and passion in building software.
-  Experienced in full-stack software development using React, TypeScript, Scala, Kotlin and C#. Other related technology includes MSSQL, Kafka
-<<: !!inc/dir ['sections', { excludeTopLevelDirSeparator: true }]
+  Experienced in full-stack software development in agile environments. Proficiency in React, TypeScript, Scala, Kotlin and C#. Other related technology includes MSSQL and Kafka.
+work_experience:
+  - title: Agoda Services Pte. Co, Ltd.
+    date: Febuary 2023 - Present
+    subtitle: Senior Software Engineer
+    details:
+      - Participated in development of Agoda's chat messaging platform and email processing system. built using Scala, Kafka, RabbitMQ, and MSSQL.
+      - Designed & Implemented system to receive incoming customer chat messages & route them to customer service agents. Backend was built using Kotlin/Ktor, MSSQL, Kafka.
+      - Implemented UI for customer service agents to send & receive chat messages. Frontend was built using React/TypeScript and Backend was built using Kotlin/Ktor
+      - Led & Participated in Design Discussions with 8 team members & collaborated with other teams.
+  - date: June 2019 - January 2023
+    subtitle: Software Engineer
+    details:
+      - Designed & Implemented an Email Scheduling functionality where users can schedule emails that would be sent later using Scala.
+      - Built an automated periodic task to evaluate hotel deals and label them as Agoda Special Offers based on their prices and included benefits using Scala & Akka Scheduler.
+      - Built new web page to allow hotel owners to manage a part of their hotels' prices and contents in Agoda's system. Frontend was built using React/TypeScript and Backend was built using C# (ASP.NET/.NET core) & Scala.
+      - Built new functionalities in Agoda's Booking Engine to integrate with partner's booking systems (rurubu.travel and japanican.com)
+  - title: Kasikorn Business and Technology Group (KBTG), Bangkok, Thailand
+    date: June 2018 - August 2018
+    subtitle: Developer intern, Blockchain Team
+    details:
+      - Implemented scripts and a web UI that helps automate deploying Hyperledger Fabric blockchain nodes.
+education:
+  - title: Chulalongkorn University
+    date: August 2015 - June 2019
+    details:
+      - Bachelor's Degree in Computer Engineering
+      - "Cumulative GPA: 3.85/4.00"
+projects:
+  - title: HeroCU (Class Project)
+    date: April 2018
+    details:
+      - Implemented a web application where users can push their web application code in git repositories to the server,
+        the web application will then be built and run in a docker container, the application will generate public URL to access the application.
+      - Deployed the web application on AWS EC2, the application uses AWS ECS and AWS Fargate to create and run docker
+        containers.
+  - title: SciMuseum CU
+    date: August 2017 - December 2017
+    details:
+      - Implemented React Native application that show information about each items placed in a museum when users scan their
+        corresponding QR codes. With “quests” feature that requires users to find specific items based on hints. The application
+        connects to a backend using GraphQL
+      - Published the application on Google Play Store, The Application was used at an exhibition on December 2017.
+extracurricular_activities:
+  - title: Thailand incubator (Thinc.)
+    date: August 2017 - December 2017
+    subtitle: Vice President
+    details:
+      - "Student software innovation club of Chulalongkorn University’s International School of Engineering (homepage: thinc.in.th)"
+      - Managed the club along with 6 core members and 9 following members.
+      - Organised 8 workshops and 2 seminars on various topics including web technologies (HTML/JS/React) and Git.
+awards:
+  - title: Google CodeJam - Passed Qualification Round
+    date: 2021
+  - title: ACM - National Round
+    date: 2016
+skills:
+  languages: [ Thai (Native), English (Fluent) ]
+  programming_languages: [ JavaScript/TypeScript, Scala, C#, Python, Kotlin ]
+  other_technical: [ React, Redux, HTML, GraphQL, CSS, SQL, Kafka, Docker, Ktor ]

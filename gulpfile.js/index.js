@@ -26,11 +26,11 @@ exports.watch = function() {
 
   const liveReload = function(_, filePath) {
     // live server workaround
-    server.lr.changed({ body: { files: [filePath]}})
+    server.lr.changed({ body: { files: [filePath] } })
   }
   
   watch(['src/**/*', 'content/**/*'], { ignoreInitial: false }, parallel(buildPug, buildCss(true)));
 
   const outputWatcher = watch([`${paths.outDir}/**/*`]);
-  outputWatcher.on('all', liveReload)
+  outputWatcher.on('all', liveReload);
 }

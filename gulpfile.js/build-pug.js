@@ -8,13 +8,14 @@ const paths = require('./paths');
 
 const yaml = require('js-yaml');
 const yamlInclude = require('yaml-include');
-yamlInclude.setBaseFile('content/index.yaml');
 
 function importPugLocals() {
+  yamlInclude.setBaseFile('content/index.yaml');
   const src = fs.readFileSync(yamlInclude.basefile);
-  const obj = yaml.safeLoad(src, { schema: yamlInclude.YAML_INCLUDE_SCHEMA, filename: yamlInclude.basefile });
-  // console.log(obj);
-  return obj;
+  return yaml.safeLoad(src, {
+    schema: yamlInclude.YAML_INCLUDE_SCHEMA,
+    filename: yamlInclude.basefile
+  });
 }
 
 function buildPug() {
