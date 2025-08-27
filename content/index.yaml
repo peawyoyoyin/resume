@@ -2,12 +2,18 @@ name: Piriyapong Laopongsit
 email: piriyapong.lao@gmail.com
 github: https://github.com/peawyoyoyin
 page_source: https://github.com/peawyoyoyin/resume
-summary: |
+summary: |-
   Software Engineer with 3 years of experience, Bachelor's Degree in Computer Engineering, and passion in building software.
   Experienced in full-stack software development in agile environments. Proficiency in React, TypeScript, Scala, Kotlin and C#. Other related technology includes MSSQL and Kafka.
 work_experience:
-  - title: Agoda Services Pte. Co, Ltd.
-    date: Febuary 2023 - Present
+  - date: February 2025 - Present
+    title: Agoda Services Pte. Co, Ltd.
+    subtitle: Staff Software Engineer
+    details:
+      - |-
+        Designed and Implemented GPT integration with Agoda's post-booking self-service chatbot system.
+        Users can interact with GPT to inquire or amend/cancel their bookings using natural language.
+  - date: February 2023 - February 2025
     subtitle: Senior Software Engineer
     details:
       - Participated in development of Agoda's chat messaging platform and email processing system. built using Scala, Kafka, RabbitMQ, and MSSQL.
