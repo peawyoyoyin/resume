@@ -8,7 +8,7 @@ html
     title #{name}'s resume
   body.container.mx-auto
       h1.text-4xl.text-center.font-bold(class="print:text-2xl") #{name}
-      .grid(class="md:grid-cols-2 print:grid-cols-2")
+      .grid.mb-4(class="md:grid-cols-2 print:grid-cols-2")
         .my-2.text-center(class="md:text-left md:my-0 print:text-left")
           ul
             li Email: #{email}
@@ -22,7 +22,6 @@ html
             if address
               each address_line in locals.address
                 li= address_line
-      .my-2
       +section('Summary')
         p= summary
       +section('Education')

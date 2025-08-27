@@ -38,30 +38,19 @@ section {
     @apply my-2;
 
     .section-item-title {
-      @screen md {
-        @apply grid grid-cols-2;
+      @apply flex flex-wrap;
+
+      .section-item-title-text {
+        @apply font-bold flex-1;
       }
 
       .section-item-date {
         @apply text-right;
       }
-
-      @screen print {
-        @apply grid grid-cols-2;
-
-        .section-item-date {
-          @apply text-right;
-        }
-      }
-      
-      .section-item-title-text {
-        @apply font-bold;
-      }
-
     }
 
     .section-item-subtitle {
-      @apply italic;
+      @apply italic col-span-3;
     }
   }
 
