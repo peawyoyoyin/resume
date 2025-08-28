@@ -1,28 +1,30 @@
-@tailwind base;
-@tailwind components;
+@use './tailwind-bridge.css';
 
-* {
-  @apply font-serif;
+@custom-variant print {
+  @media print {
+    @slot;
+  }
 }
 
-* {
-  @screen print {
-    @apply text-sm;
+@layer base {
+  * {
+    @apply font-serif;
+    @apply print:text-sm;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
   }
 }
 
 body {
   @apply px-4;
-  @screen md {
-    @apply px-0;
-  }
+  @apply print:max-h-[297mm];
+  break-after: page;
 
-  @screen print {
-    max-height: 297mm;
-    width: 210mm;
-  }
-
-  page-break-after: always;
+  @apply md:container
 }
 
 a {
@@ -30,27 +32,27 @@ a {
 }
 
 section {
-  .section-title {
-    @apply border-solid border-b-2 border-black font-bold my-2;
+  & .section-title {
+    @apply border-b-2 border-black font-bold my-2;
   }
 
-  .section-item {
+  & .section-item {
     @apply my-2;
 
-    .section-item-title {
+    & .section-item-title {
       @apply flex flex-wrap;
 
-      .section-item-title-text {
-        @apply font-bold flex-1;
+      & .section-item-title-text {
+        @apply font-bold flex-1 min-w-fit;
       }
 
-      .section-item-date {
+      & .section-item-date {
         @apply text-right;
       }
     }
 
-    .section-item-subtitle {
-      @apply italic col-span-3;
+    & .section-item-subtitle {
+      @apply italic flex-1 min-w-fit;
     }
   }
 
@@ -60,4 +62,3 @@ section {
   }
 }
 
-@tailwind utilities;

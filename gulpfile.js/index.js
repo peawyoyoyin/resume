@@ -19,7 +19,7 @@ function clean() {
   ]);
 }
 
-exports.default = series(prod, clean, buildPug, buildCss());
+exports.default = series(prod, clean, buildPug, buildCss);
 exports.watch = function() {
   const server = liveServer.static(paths.outDir);
   server.start();
@@ -29,7 +29,7 @@ exports.watch = function() {
     server.lr.changed({ body: { files: [filePath] } })
   }
   
-  watch(['src/**/*', 'content/**/*'], { ignoreInitial: false }, parallel(buildPug, buildCss(true)));
+  watch(['src/**/*', 'content/**/*'], { ignoreInitial: false }, parallel(buildPug, buildCss));
 
   const outputWatcher = watch([`${paths.outDir}/**/*`]);
   outputWatcher.on('all', liveReload);

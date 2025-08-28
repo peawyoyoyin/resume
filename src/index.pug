@@ -3,11 +3,11 @@ include views/section.pug
 doctype html
 html
   head
-    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="index.css")
     title #{name}'s resume
-  body.container.mx-auto
-      h1.text-4xl.text-center.font-bold(class="print:text-2xl") #{name}
+  body.mx-auto
+      h1(class="text-4xl leading-[1.5] print:text-2xl text-center font-bold") #{name}
       .grid.mb-4(class="md:grid-cols-2 print:grid-cols-2")
         .my-2.text-center(class="md:text-left md:my-0 print:text-left")
           ul

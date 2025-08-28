@@ -2,28 +2,19 @@ const { src, dest } = require('gulp');
 
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass')(require('sass'));
-const tailwindcss = require('tailwindcss');
+const tailwindcss = require('@tailwindcss/postcss');
 
 const paths = require('./paths');
 
-const buildCss = (minify = true) => function buildCss() {
+function buildCss() {
   const postCSSPlugins = [
     tailwindcss,
   ];
   
   let pipeline = src('src/index.scss')
-    .pipe(sass())
+    .pipe(sass({ loadPaths: ['src', 'node_modules'] }))
     .pipe(postcss(postCSSPlugins))
 
-  if (minify) {
-    const cleanCSS = require('gulp-clean-css');
-
-    pipeline = pipeline
-      .pipe(cleanCSS({
-        compatibility: 'ie8'
-      }));
-  }
-    
    return pipeline.pipe(dest(paths.outDir));
 }
 
